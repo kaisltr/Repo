@@ -1,0 +1,61 @@
+{% extends is_granted('ROLE_SUPER_ADMIN') ? "::baseBack.html.twig" : "::base.html.twig"%}
+
+{% block content %}
+
+    <style>
+        #map {
+            height: 300px;
+            width: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+
+
+    </style>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-12 block">
+    <h1>Cabinet: {{ cabinet.idCabinet }}</h1>
+
+    <table border="1" class="table">
+        <tbody>
+
+            <tr>
+                <th>Telephone</th>
+                <td>{{ cabinet.numTelCabinet }}</td>
+            </tr>
+            <tr>
+                <th>Ouverture</th>
+                <td>{% if cabinet.horaireOuvertureCabinet %}{{ cabinet.horaireOuvertureCabinet|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Fermeture</th>
+                <td>{% if cabinet.horaireFermetureCabinet %}{{ cabinet.horaireFermetureCabinet|date('H:i:s') }}{% endif %}</td>
+            </tr>
+
+        </tbody>
+    </table>
+        </div>
+
+            <div class="col-md-12">
+                <div class="col-md-4">
+
+
+                        <a href="{{ path('cabinet_index') }}" class="btn btn-picton btn-xlg btn-rectangle">Tout les Cabinets</a>
+
+                </div>
+                &emsp; &emsp;
+                {% if app.user and app.user==cabinet.idrespcabinet%}
+                <div class="col-md-4">
+                        <a href="{{ path('cabinet_edit', { 'idCabinet': cabinet.idCabinet }) }}" class="btn btn-picton btn-xlg btn-rectangle" style="background-color: red">Modifier  cabinet</a>
+                </div>
+
+                    <div class="col-md-4">
+                            {{ form_start(delete_form) }}
+                            <input class="btn btn-picton btn-xlg btn-rectangle" style="background-color: green" type="submit" value="Supprimer cabinet">
+                            {{ form_end(delete_form) }}
+                    </div>
+                {% endif %}
+            </div>
+        </div></div>
+{% endblock %}

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bacotna is a truly multi purpose template, coming with 50+ ready-to-use Homepages & 100+ HTML Files in one Package. Build whatever you like with this Template.Be it Business, Corporate, Medical, Travel, Construction, Real Estate, Magazine, Portfolio, Agency, Hotel, Yoga, Hosting, Photography, Ecommerce, Industry or Product launch, just everything is possible with bacotna.">
+    <meta name="keywords" content=" app, business, construction, corporate, creative, ecommerce, hosting, hotel, magazine, medical, multipurpose, photography, real estate, restaurant, yoga">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" href="{{  asset('ico/favicon.png') }}">
+
+    <title>Bacotna Creative Agency and Corporate Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{  asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{  asset('css/revolution/settings.css') }}s">
+
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="{{  asset('css/revolution/layers.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{  asset('css/revolution/navigation.css') }}">
+
+    <link href="{{  asset('css/style.css') }}" rel="stylesheet">
+
+    <!-- Color -->
+    <link id="skin" href="{{  asset('skins/default.css') }}" rel="stylesheet">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{  asset('favicon.ico') }}" />
+</head>
+<body>
+
+
+{% block body %}
+
+
+
+        <!-- Start top section -->
+        <div class="top-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="top-social-network">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-trambl"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <form class="select-language floatright">
+                            <select name="tech" class="tech" id="tech">
+                                <option value="english" data-image="{{ asset('img/flag/uk.png')}}" id="english">English</option>
+                                <option value="spanish" data-image="{{ asset('img/flag/sp.png')}}" id="spanish">Spanish</option>
+                                <option value="portuguese" data-image="{{ asset('img/flag/por.png')}}" id="portuguese">Portuguese</option>
+                                <option value="arabic" data-image="{{ asset('img/flag/arb.png')}}" id="arabic">Arabic</option>
+                                <option value="russian" data-image="{{ asset('img/flag/rus.png')}}" id="russian">Russian</option>
+                                <option value="japanese" data-image="{{ asset('img/flag/jap.png')}}" id="japanese">Japanese</option>
+                                <option value="chinese" data-image="{{ asset('img/flag/ch.png')}}" id="chinese">Chinese</option>
+                            </select>
+                        </form>
+                        {%  if app.user %}
+                            <ul class="right-link sign-link">
+                                <li><a href="{{ path('fos_user_profile_show') }}" class="signin">{{ app.user.username }}</a></li>
+                                <li>or</li>
+                                <li><a href="{{ path('fos_user_security_logout') }}" class="signup">Logout</a></li>
+
+                            </ul>
+                        {% else %}
+                            <ul class="right-link sign-link">
+                                <li><a href="{{ path('fos_user_security_login') }}" class="signin">Sign in</a></li>
+                                <li>or</li>
+                                <li><a href="{{ path('fos_user_registration_register') }}" class="signup">Register</a></li>
+
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End top section -->
+        <div class="clearfix"></div>
+
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-sticky bootsnav">
+
+            <!-- Start Top Search -->
+            <div class="top-search">
+                <div class="container">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Type something ann hit enter">
+                        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Search -->
+
+
+
+
+
+        <div class="container">
+            <!-- Start Atribute Navigation -->
+            <div class="attr-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                            <i class="fa fa-shopping-bag"></i>
+                            <span class="badge">3</span>
+                        </a>
+                        <ul class="dropdown-menu cart-list">
+                            <li>
+                                <a href="#" class="photo"><img src="{{ asset('img/product/thumbs/thumb01.jpg')}}" class="cart-thumb" alt="" /></a>
+                                <h6><a href="#">Delica omtantur </a></h6>
+                                <p>2x - <span class="price">$99.99</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="photo"><img src="{{ asset('img/product/thumbs/thumb02.jpg')}}" class="cart-thumb" alt="" /></a>
+                                <h6><a href="#">Omnes ocurreret</a></h6>
+                                <p>1x - <span class="price">$33.33</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="photo"><img src="{{ asset('img/product/thumbs/thumb03.jpg')}}" class="cart-thumb" alt="" /></a>
+                                <h6><a href="#">Agam facilisis</a></h6>
+                                <p>2x - <span class="price">$99.99</span></p>
+                            </li>
+                            <li class="total">
+                                <span class="pull-right"><strong>Total</strong>: $0.00</span>
+                                <a href="#" class="btn-checkout">Checkout</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+            <!-- End Atribute Navigation -->
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#brand"><img src="{{ asset('img/brand/logo-black.png')}}" class="logo" alt=""></a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Page</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >About</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="about.html">About Alt1</a></li>
+                                    <li><a href="about-alt1.html">About Alt2</a></li>
+                                    <li><a href="about-alt2.html">About Alt3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="services.html">Services Alt1</a></li>
+                                    <li><a href="services-alt1.html">Services Alt2</a></li>
+                                    <li><a href="services-alt2.html">Services Alt3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="faq.html">Faq</a></li>
+                            <li><a href="site-map.html">Site map</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dropdown</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Menu alt</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Submenu</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Menu alt</a></li>
+                                            <li><a href="#">Menu alt</a></li>
+                                            <li><a href="#">Menu alt</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Menu alt</a></li>
+                                    <li><a href="#">Menu alt</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog-leftsidebar.html">Blog left sidebar</a></li>
+                            <li><a href="blog-rightsidebar.html">Blog right sidebar</a></li>
+                            <li><a href="blog-rightsidebar.html">Blog magazine</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Single Post</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="singlepost-leftsidebar.html">Singlepost left sidebar</a></li>
+                                    <li><a href="singlepost-rightsidebar.html">Singlepost right sidebar</a></li>
+                                    <li><a href="singlepost-magazine.html">Singlepost magazine</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Portfolio</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portfolio-alt1.html">Portfolio alt1</a></li>
+                            <li><a href="portfolio-alt2.html">Portfolio alt2</a></li>
+                            <li><a href="portfolio-alt3.html">Portfolio alt3</a></li>
+                            <li><a href="portfolio-alt4.html">Portfolio alt4</a></li>
+                            <li><a href="portfolio-alt5.html">Portfolio alt5</a></li>
+                            <li><a href="portfolio-alt6.html">Portfolio alt6</a></li>
+                            <li><a href="portfolio-alt7.html">Portfolio alt7</a></li>
+                            <li><a href="portfolio-alt8.html">Portfolio alt8</a></li>
+                            <li><a href="portfolio-alt9.html">Portfolio alt9</a></li>
+                            <li><a href="portfolio-alt10.html">Portfolio alt10</a></li>
+                            <li><a href="portfolio-detail.html">Portfolio detail</a></li>
+                            <li><a href="portfolio-detail-alt1.html">Portfolio detail alt1</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown megamenu-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components</a>
+                        <ul class="dropdown-menu megamenu-content" role="menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-menu col-md-3">
+                                        <h6 class="title">Interactive</h6>
+                                        <div class="content">
+                                            <ul class="menu-col">
+                                                <li><a href="call-to-action.html"><i class="fa fa-microphone"></i> Call to action</a></li>
+                                                <li><a href="counter.html"><i class="fa fa-pie-chart"></i> Counter</a></li>
+                                                <li><a href="maps.html"><i class="fa fa-map-o"></i> Google maps</a></li>
+                                                <li><a href="media-responsive.html"><i class="fa fa-film"></i> Media responsive</a></li>
+                                                <li><a href="modal.html"><i class="fa fa-external-link"></i> Modal</a></li>
+                                                <li><a href="process.html"><i class="fa fa-hourglass-1"></i> Process</a></li>
+                                                <li><a href="progress.html"><i class="fa fa-server"></i> Progress bar</a></li>
+                                                <li><a href="pricing.html"><i class="fa fa-shopping-bag"></i> Pricing</a></li>
+                                                <li><a href="team.html"><i class="fa fa-users"></i> Team</a></li>
+                                                <li><a href="testimoni.html"><i class="fa fa-comments"></i> Testimoni</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end col-3 -->
+                                    <div class="col-menu col-md-3">
+                                        <h6 class="title">Elements</h6>
+                                        <div class="content">
+                                            <ul class="menu-col">
+                                                <li><a href="accordion.html"><i class="fa fa-navicon"></i> Accordion</a></li>
+                                                <li><a href="alert.html"><i class="fa fa-info-circle"></i> Alert</a></li>
+                                                <li><a href="button.html"><i class="fa fa-download"></i> Button</a></li>
+                                                <li><a href="form.html"><i class="fa fa-unlock-alt"></i> Form</a></li>
+                                                <li><a href="icon.html"><i class="fa fa-flag"></i> Icons style</a></li>
+                                                <li><a href="icon-box.html"><i class="fa fa-inbox"></i> Icons with box</a></li>
+                                                <li><a href="icon-text.html"><i class="fa fa-star"></i> Icons with text</a></li>
+                                                <li><a href="images.html"><i class="fa fa-image"></i> Images style</a></li>
+                                                <li><a href="pagination.html"><i class="fa fa-sort-numeric-asc"></i> Pagination</a></li>
+                                                <li><a href="tab.html"><i class="fa fa-tasks"></i> Tab style</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end col-3 -->
+                                    <div class="col-menu col-md-3">
+                                        <h6 class="title">Typography & MLsc</h6>
+                                        <div class="content">
+                                            <ul class="menu-col">
+                                                <li><a href="typography.html"><i class="fa fa-font"></i> Typography</a></li>
+                                                <li><a href="heading.html"><i class="fa fa-header"></i> Heading</a></li>
+                                                <li><a href="blockquote.html"><i class="fa fa-quote-left"></i> Blockquote</a></li>
+                                                <li><a href="columns.html"><i class="fa fa-th"></i> Columns</a></li>
+                                                <li><a href="divider.html"><i class="fa fa-file-text-o"></i> Separators</a></li>
+                                                <li><a href="dropcaps.html"><i class="fa fa-th-list"></i> Dropcaps</a></li>
+                                                <li><a href="highlights.html"><i class="fa fa-list-alt"></i> Highlights</a></li>
+                                                <li><a href="list.html"><i class="fa fa-list-ol"></i> List style</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end col-3 -->
+                                    <div class="col-menu col-md-3">
+                                        <h6 class="title">Speciality page</h6>
+                                        <div class="content">
+                                            <ul class="menu-col">
+                                                <li><a href="error404.html"><i class="fa fa-warning"></i> Error 404</a></li>
+                                                <li><a href="maintenance.html"><i class="fa fa-cogs"></i> Maintenance</a></li>
+                                                <li><a href="signin.html"><i class="fa fa-sign-in"></i> Signin</a></li>
+                                                <li><a href="signup.html"><i class="fa fa-sign-out"></i> Signin</a></li>
+                                                <li><a href="underconstruction.html"><i class="fa fa-wrench"></i> Underconstruction</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end col-3 -->
+                                </div><!-- end row -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Shop</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Shop page</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="shop.html">Shop page alt1</a></li>
+                                    <li><a href="shop-alt1.html">Shop page alt2</a></li>
+                                    <li><a href="shop-alt2.html">Shop page alt3</a></li>
+                                    <li><a href="shop-alt3.html">Shop page alt4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="shop-detail.html">Shop detail</a></li>
+                            <li><a href="shopping-cart.html">Shopping cart</a></li>
+                            <li><a href="shopping-checkout.html">Checkout</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- End Navigation -->
+
+    {% block content %}
+
+    {% endblock content %}
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- START REVOLUTION SLIDER 5.0 -->
+
+    <!-- Start footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="widget">
+                        <img src="{{ asset('img/brand/logo-white.png')}}" class="logo-footer" alt="" />
+                        <p>
+                            Nibh scriptorem ei pri, ei tation timeam nominati mei. Sit ex audire habemus, soleat fastidii deterruisset nam no. Graece admodum postulant cu sed, mel ei voluptua iracundia. Vis an platonem persecuti, at vel laoreet fuisset invenire.
+                        </p>
+                    </div>
+                    <div class="widget">
+                        <h5><span>Our</span> office</h5>
+                        <ul class="office-contact">
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <h6>Address :</h6>
+                                JL.Kemacentan selatan No.13 Block.Q2 Jakarta Indonesia
+                            </li>
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <h6>Phone :</h6>
+                                (021) 1234 567 890
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <h6>Emali :</h6>
+                                info@yourdomain.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget">
+                        <h5><span>Latest</span> article</h5>
+                        <ul class="recent-post-widget">
+                            <li>
+                                <a href="#" class="img-thumb"><img src="{{ asset('img/blog/thumbs/thumb01.jpg') }}" class="img-responsive" alt="" /></a>
+                                <h6><a href="#">Exerci intellegat te facete urbanitas no est</a></h6>
+                                <p>
+                                    Nostrud disputationi sed in, nam ea altera deserunt. Veri malis constituam vel cu.
+                                </p>
+                            </li>
+                            <li>
+                                <a href="#" class="img-thumb"><img src="{{ asset('img/blog/thumbs/thumb02.jpg') }}" class="img-responsive" alt="" /></a>
+                                <h6><a href="#">Exerci intellegat te facete urbanitas no est</a></h6>
+                                <p>
+                                    Nostrud disputationi sed in, nam ea altera deserunt. Veri malis constituam vel cu.
+                                </p>
+                            </li>
+                            <li>
+                                <a href="#" class="img-thumb"><img src="{{ asset('img/blog/thumbs/thumb03.jpg') }}" class="img-responsive" alt="" /></a>
+                                <h6><a href="#">Exerci intellegat te facete urbanitas no est</a></h6>
+                                <p>
+                                    Nostrud disputationi sed in, nam ea altera deserunt. Veri malis constituam vel cu.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget">
+                        <h5><span>Recent</span> portfolio</h5>
+                        <ul class="recent-portfolio">
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb01.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb02.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb03.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb04.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb05.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb06.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb07.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb08.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb09.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb10.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb11.jpg') }}" alt="" /></a></li>
+                            <li><a href="#"><img src="{{ asset('img/gallery/thumbs/thumb12.jpg') }}" alt="" /></a></li>
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h5><span>latest</span> tweet</h5>
+                        <div class="tweet"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget">
+                        <h5><span>Subscribe</span> newsletter</h5>
+                        <!-- Start Subscribe -->
+                        <form class="form-subscribe">
+                            <input type="text" class="input-subscribe" placeholder="Enter your email address...">
+                            <button class="btn btn-fiord btn-3d btn-icon-right icon-divider btn-block" type="button">Subscribe now<i class="fa fa-send"></i></button>
+                        </form>
+                        <!-- End Subscribe -->
+                    </div>
+                    <div class="widget">
+                        <h5><span>Social</span> network</h5>
+                        <a href="#" class="social-network"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-google-plus"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-tumblr"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-behance"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-skype"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-pinterest"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-dribbble"></i></a>
+                        <a href="#" class="social-network"><i class="fa fa-flickr"></i></a>
+                    </div>
+                    <div class="widget">
+                        <h5><span>Explore</span> link</h5>
+                        <ul class="link-list">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Our services</a></li>
+                            <li><a href="#">Members</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Meet our team</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Forum</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>2017 &copy; Copyright <a href="http://99webpage.com/">99webpage.</a> All images content only for demos is not included in the download package</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li><a href="#">About 99webpage</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+
+{% endblock body %}
+{% block javascripts %}
+
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{  asset('js/loading.js') }}"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="{{ asset('js/ie8-responsive-file-warning.js') }}"></script><![endif]-->
+    <script src="{{  asset('js/ie-emulation-modes-warning.js') }}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{{  asset('js/html5shiv.min.js') }}"></script>
+    <script src="{{  asset('js/respond.min.js') }}"></script>
+    <![endif]-->
+
+    <!-- bootstrap -->
+    <script src="{{  asset('js/bootstrap.min.js') }}"></script>
+
+    <!-- easing -->
+    <script src="{{  asset('js/jquery.easing-1.3.min.js') }}"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{  asset('js/ie10-viewport-bug-workaround.js') }}"></script>
+
+    <!-- Bootsnavs -->
+    <script src="{{  asset('js/bootsnav.js') }}"></script>
+
+    <!-- REVOLUTION JS FILES -->
+    <script type="text/javascript" src="{{  asset('js/revolution/jquery.themepunch.tools.min.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('js/revolution/jquery.themepunch.revolution.min.js') }}"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+    (Load Extensions only on Local File Systems !
+    The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="{{  asset('js/revolution/revolution.extension.actions.min.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('js/revolution/revolution.extension.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('js/revolution/revolution.extension.kenburn.min.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('js/revolution/revolution.extension.layeranimation.min.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('js/revolution/revolution.extension.migration.min.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('js/revolution/revolution.extension.navigation.min.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('js/revolution/revolution.extension.parallax.min.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('js/revolution/revolution.extension.slideanims.min.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('js/revolution/revolution.extension.video.min.js') }}"></script>
+
+    <!-- CUSTOM REVOLUTION JS FILES -->
+    <script type="text/javascript" src="{{  asset('js/revolution/setting/clean-revolution-slider.js') }}"></script>
+
+    <!-- Custom form -->
+    <script src="{{  asset('js/form/jcf.js') }}"></script>
+    <script src="{{  asset('js/form/jcf.scrollable.js') }}"></script>
+    <script src="{{  asset('js/form/jcf.select.js') }}"></script>
+
+    <!-- Custom checkbox and radio -->
+    <script src="{{  asset('js/checkator/fm.checkator.jquery.js') }}"></script>
+    <script src="{{  asset('js/checkator/setting.js') }}"></script>
+
+    <!-- Select language -->
+    <script src="{{  asset('js/selectdropdown/jquery.dd.min.js') }}"></script>
+    <script src="{{  asset('js/selectdropdown/setting.js') }}"></script>
+
+    <!-- masonry -->
+    <script src="{{  asset('js/masonry/masonry.min.js') }}"></script>
+    <script src="{{  asset('js/masonry/masonry.filter.js') }}"></script>
+    <script src="{{  asset('js/masonry/setting.js') }}"></script>
+
+    <!-- PrettyPhoto -->
+    <script src="{{  asset('js/prettyPhoto/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{  asset('js/prettyPhoto/setting.js') }}"></script>
+
+    <!-- owl carousel -->
+    <script src="{{  asset('js/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{  asset('js/owlcarousel/setting.js') }}"></script>
+
+    <!-- Parallax -->
+    <script src="{{  asset('js/parallax/jquery.parallax-1.1.3.js') }}"></script>
+    <script src="{{  asset('js/parallax/setting.js') }}"></script>
+
+    <!-- Twitter -->
+    <script src=" {{ asset('js/twitter/tweetie.min.js') }}"></script>
+    <script src=" {{ asset('js/twitter/ticker.js') }}"></script>
+    <script src=" {{ asset('js/twitter/setting.js') }}"></script>
+
+    <!-- Custom -->
+    <script src=" {{ asset('js/custom.js') }}"></script>
+
+    <!-- Theme option-->
+    <script src=" {{ asset('js/template-option/demosetting.js') }}"></script>
+
+{% endblock %}
+
+</body>
+</html>

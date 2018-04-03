@@ -1,0 +1,7 @@
+sante_cabinet:
+    resource: "@SanteBundle/Resources/config/routing/cabinet.yml"
+    prefix:   /cabinet
+
+sante_homepage:
+    path:     /
+    defaults: { _controller: SanteBundle:Default:index }

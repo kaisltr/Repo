@@ -1,0 +1,362 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bacotna is a truly multi purpose template, coming with 50+ ready-to-use Homepages & 100+ HTML Files in one Package. Build whatever you like with this Template.Be it Business, Corporate, Medical, Travel, Construction, Real Estate, Magazine, Portfolio, Agency, Hotel, Yoga, Hosting, Photography, Ecommerce, Industry or Product launch, just everything is possible with bacotna.">
+    <meta name="keywords" content=" app, business, construction, corporate, creative, ecommerce, hosting, hotel, magazine, medical, multipurpose, photography, real estate, restaurant, yoga">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" href="{{ asset('ico/favicon.png') }}">
+
+    <title>Bacotna Creative Agency and Corporate Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/revolution/settings.css') }}s">
+
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/revolution/layers.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/revolution/navigation.css') }}">
+
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <!-- Color -->
+    <link id="skin" href="{{ asset('skins/default.css') }}" rel="stylesheet">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+
+{% block content %}
+
+<body class="logreg-wrapp"><div class="wrapper">
+    <!-- Start preloading -->
+    <div id="loading" class="loading-invisible">
+        <div class="loading-center">
+            <div class="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- End preloading -->
+
+    <!-- Start demo options -->
+    <div class="demo-panel">
+        <div class="demo-col">
+            <h5>Try Bacotna with other template and color skins</h5>
+            <h6>Index variants</h6>
+            <select onchange="location = this.options[this.selectedIndex].value;" data-jcf="{&quot;wrapNative&quot;: false, &quot;wrapNativeOnMobile&quot;: false}" class="jcf-hidden">
+                <optgroup label="Corporate">
+                    <option value="index.html">Corporate alt1</option>
+                    <option value="index-corporate-alt1.html">Corporate alt2</option>
+                    <option value="index-corporate-alt2.html">Corporate alt3</option>
+                    <option value="index-corporate-alt3.html">Corporate alt4</option>
+                    <option value="index-corporate-alt4.html">Corporate alt5</option>
+                    <option value="index-corporate-alt5.html">Corporate alt6</option>
+                    <option value="index-corporate-alt6.html">Corporate alt7</option>
+                    <option value="index-corporate-alt7.html">Corporate alt8</option>
+                    <option value="index-corporate-alt8.html">Corporate alt9</option>
+                    <option value="index-corporate-alt9.html">Corporate alt10</option>
+                    <option value="index-corporate-alt10.html">Corporate alt11</option>
+                    <option value="index-corporate-alt11.html">Corporate alt12</option>
+                    <option value="index-corporate-alt12.html">Corporate alt13</option>
+                    <option value="index-corporate-alt13.html">Corporate alt14</option>
+                    <option value="index-corporate-alt14.html">Corporate alt15</option>
+                </optgroup>
+                <optgroup label="Creative">
+                    <option value="index-creative-alt1.html">Creative alt1</option>
+                    <option value="index-creative-alt2.html">Creative alt2</option>
+                    <option value="index-creative-alt3.html">Creative alt3</option>
+                    <option value="index-creative-alt4.html">Creative alt4</option>
+                    <option value="index-creative-alt5.html">Creative alt5</option>
+                    <option value="index-creative-alt6.html">Creative alt6</option>
+                    <option value="index-creative-alt7.html">Creative alt7</option>
+                    <option value="index-creative-alt8.html">Creative alt8</option>
+                    <option value="index-creative-alt9.html">Creative alt9</option>
+                    <option value="index-creative-alt10.html">Creative alt10</option>
+                    <option value="index-creative-alt11.html">Creative alt11</option>
+                    <option value="index-creative-alt12.html">Creative alt12</option>
+                    <option value="index-creative-alt13.html">Creative alt13</option>
+                    <option value="index-creative-alt14.html">Creative alt14</option>
+                    <option value="index-creative-alt15.html">Creative alt15</option>
+                </optgroup>
+                <optgroup label="Niche template">
+                    <option value="index-niche-app.html">App</option>
+                    <option value="index-niche-construction.html">Construction</option>
+                    <option value="index-niche-courier.html">Courier</option>
+                    <option value="index-niche-cv.html">CV</option>
+                    <option value="index-niche-ecommerce.html">Ecommerce</option>
+                    <option value="index-niche-ecommerce-alt1.html">Ecommerce alt1</option>
+                    <option value="index-niche-fitness.html">Fitness</option>
+                    <option value="index-niche-hosting.html">Hosting</option>
+                    <option value="index-niche-hotel.html">Hotel</option>
+                    <option value="index-niche-industry.html">Industry</option>
+                    <option value="index-niche-magazine.html">Magazine</option>
+                    <option value="index-niche-medical.html">Medical</option>
+                    <option value="index-niche-photography.html">Photography</option>
+                    <option value="index-niche-pizza.html">Pizza</option>
+                    <option value="index-niche-product-launch.html">Product launch</option>
+                    <option value="index-niche-realestate.html">Real estate</option>
+                    <option value="index-niche-software.html">Software</option>
+                    <option value="index-niche-speaker.html">Speaker</option>
+                    <option value="index-niche-travel.html">Travel</option>
+                    <option value="index-niche-yoga.html">Yoga</option>
+                </optgroup>
+                <optgroup label="Speciality page">
+                    <option value="underconstruction.html">Under construction</option>
+                    <option value="maintenance.html">Maintenance</option>
+                    <option value="error404.html">Error 404</option>
+                </optgroup>
+            </select><span class="jcf-select jcf-unselectable"><span class="jcf-select-text"><span class="">Corporate alt1</span></span><span class="jcf-select-opener"></span></span>
+        </div>
+        <div class="demo-col">
+            <h6>Color options</h6>
+            <ul class="stylechanger">
+                <li><a id="primary" href="#" data-skin="default.css"></a></li>
+                <li><a id="buttercup" href="#" data-skin="buttercup.css"></a></li>
+                <li><a id="jaffa" href="#" data-skin="jaffa.css"></a></li>
+                <li><a id="mandy" href="#" data-skin="mandy.css"></a></li>
+                <li><a id="fiord" href="#" data-skin="fiord.css"></a></li>
+                <li><a id="picton" href="#" data-skin="picton.css"></a></li>
+                <li><a id="mantis" href="#" data-skin="mantis.css"></a></li>
+                <li><a id="turquoise" href="#" data-skin="turquoise.css"></a></li>
+                <li><a id="gold" href="#" data-skin="gold.css"></a></li>
+                <li><a id="kimberly" href="#" data-skin="kimberly.css"></a></li>
+                <li><a id="christine" href="#" data-skin="christine.css"></a></li>
+                <li><a id="neptune" href="#" data-skin="neptune.css"></a></li>
+                <li><a id="amaranth" href="#" data-skin="amaranth.css"></a></li>
+                <li><a id="sunflower" href="#" data-skin="sunflower.css"></a></li>
+                <li><a id="viridian" href="#" data-skin="viridian.css"></a></li>
+                <li><a id="cinnabar" href="#" data-skin="cinnabar.css"></a></li>
+                <li><a id="cadillac" href="#" data-skin="pink.css"></a></li>
+                <li><a id="eastern" href="#" data-skin="cadillac.css"></a></li>
+                <li><a id="golden" href="#" data-skin="golden.css"></a></li>
+                <li><a id="wedgewood" href="#" data-skin="sky-blue.css"></a></li>
+                <li><a id="thunderbird" href="#" data-skin="thunderbird.css"></a></li>
+                <li><a id="apple" href="#" data-skin="apple.css"></a></li>
+                <li><a id="potters" href="#" data-skin="potters.css"></a></li>
+                <li><a id="viola" href="#" data-skin="viola.css"></a></li>
+                <li><a id="azure" href="#" data-skin="azure.css"></a></li>
+                <li><a id="stiletto" href="#" data-skin="stiletto.css"></a></li>
+                <li><a id="meadow" href="#" data-skin="meadow.css"></a></li>
+                <li><a id="tussock" href="#" data-skin="tussock.css"></a></li>
+                <li><a id="serria" href="#" data-skin="serria.css"></a></li>
+                <li><a id="steel" href="#" data-skin="steel.css"></a></li>
+                <li><a id="brandy" href="#" data-skin="brandy.css"></a></li>
+                <li><a id="spruce" href="#" data-skin="spruce.css"></a></li>
+                <li><a id="saddle" href="#" data-skin="saddle.css"></a></li>
+                <li><a id="mahogany" href="#" data-skin="mahogany.css"></a></li>
+                <li><a id="froly" href="#" data-skin="froly.css"></a></li>
+                <li><a id="lemon" href="#" data-skin="lemon.css"></a></li>
+                <li><a id="berry" href="#" data-skin="berry.css"></a></li>
+                <li><a id="crimson" href="#" data-skin="crimson.css"></a></li>
+                <li><a id="deyork" href="#" data-skin="deyork.css"></a></li>
+                <li><a id="sunshade" href="#" data-skin="sunshade.css"></a></li>
+                <li><a id="chestnut" href="#" data-skin="chestnut.css"></a></li>
+                <li><a id="paradiso" href="#" data-skin="paradiso.css"></a></li>
+                <li><a id="lavender" href="#" data-skin="lavender.css"></a></li>
+                <li><a id="olive" href="#" data-skin="olive.css"></a></li>
+                <li><a id="nutmeg" href="#" data-skin="nutmeg.css"></a></li>
+                <li><a id="yonder" href="#" data-skin="yonder.css"></a></li>
+                <li><a id="nandor" href="#" data-skin="nandor.css"></a></li>
+                <li><a id="desert" href="#" data-skin="desert.css"></a></li>
+                <li><a id="downy" href="#" data-skin="downy.css"></a></li>
+            </ul>
+        </div>
+    </div>
+    <a class="openpanel" href="#" title=""></a>
+    <!-- End demo options -->
+
+    <!-- Start register -->
+    <div class="logreg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="login-wrapp">
+                        <div class="logreg-contain">
+                            <div class="custom-tabs">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="active">
+                                        <a href="#tab1" data-toggle="tab" aria-expanded="true">Login to your account</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#tab2" data-toggle="tab" aria-expanded="false">Use social media</a>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade active in" id="tab1">
+                                        {{ include('@User/Security/login_content.html.twig') }}
+                                    </div>
+                                    <div class="tab-pane fade" id="tab2">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center marginbot20">
+                                                <h5>Login with social media account</h5>
+                                                <a href="#" class="btn btn-primary btn-icon btn-block btn-picton btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+                                                <a href="#" class="btn btn-primary btn-icon btn-block btn-turquoise btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+                                                <a href="#" class="btn btn-primary btn-icon btn-block btn-serria btn-lg"><i class="fa fa-instagram"></i> Instagram</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End register -->
+
+    <!-- START JAVASCRIPT -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/loading.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- easing -->
+    <script src="js/jquery.easing-1.3.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Bootsnavs -->
+    <script src="js/bootsnav.js"></script>
+
+    <!-- Custom form -->
+    <script src="js/form/jcf.js"></script>
+    <script src="js/form/jcf.scrollable.js"></script>
+    <script src="js/form/jcf.select.js"></script>
+
+    <!-- Custom checkbox and radio -->
+    <script src="js/checkator/fm.checkator.jquery.js"></script>
+    <script src="js/checkator/setting.js"></script>
+
+    <!-- Select language -->
+    <script src="js/selectdropdown/jquery.dd.min.js"></script>
+    <script src="js/selectdropdown/setting.js"></script>
+
+    <!-- google code prettify -->
+    <script src="js/google-code-prettify/prettify.js"></script>
+
+    <!-- Twitter -->
+    <script src="js/twitter/tweetie.min.js"></script>
+    <script src="js/twitter/ticker.js"></script>
+    <script src="js/twitter/setting.js"></script>
+
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+
+    <!-- Theme option-->
+    <script src="js/template-option/demosetting.js"></script>
+
+
+</div></body>
+
+
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/loading.js') }}"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="{{ asset('js/ie8-responsive-file-warning.js') }}"></script><![endif]-->
+    <script src="{{ asset('js/ie-emulation-modes-warning.js') }}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('js/html5shiv.min.js') }}"></script>
+    <script src="{{ asset('js/respond.min.js') }}"></script>
+    <![endif]-->
+
+    <!-- bootstrap -->
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+    <!-- easing -->
+    <script src="{{ asset('js/jquery.easing-1.3.min.js') }}"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{ asset('js/ie10-viewport-bug-workaround.js') }}"></script>
+
+    <!-- Bootsnavs -->
+    <script src="{{ asset('js/bootsnav.js') }}"></script>
+
+    <!-- REVOLUTION JS FILES -->
+    <script type="text/javascript" src="{{ asset('js/revolution/jquery.themepunch.tools.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/revolution/jquery.themepunch.revolution.min.js') }}"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+    (Load Extensions only on Local File Systems !
+    The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="{{ asset('js/revolution/revolution.extension.actions.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/revolution/revolution.extension.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/revolution/revolution.extension.kenburn.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/revolution/revolution.extension.layeranimation.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/revolution/revolution.extension.migration.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/revolution/revolution.extension.navigation.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/revolution/revolution.extension.parallax.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/revolution/revolution.extension.slideanims.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/revolution/revolution.extension.video.min.js') }}"></script>
+
+    <!-- CUSTOM REVOLUTION JS FILES -->
+    <script type="text/javascript" src="{{ asset('js/revolution/setting/clean-revolution-slider.js') }}"></script>
+
+    <!-- Custom form -->
+    <script src="{{ asset('js/form/jcf.js') }}"></script>
+    <script src="{{ asset('js/form/jcf.scrollable.js') }}"></script>
+    <script src="{{ asset('js/form/jcf.select.js') }}"></script>
+
+    <!-- Custom checkbox and radio -->
+    <script src="{{ asset('js/checkator/fm.checkator.jquery.js') }}"></script>
+    <script src="{{ asset('js/checkator/setting.js') }}"></script>
+
+    <!-- Select language -->
+    <script src="{{ asset('js/selectdropdown/jquery.dd.min.js') }}"></script>
+    <script src="{{ asset('js/selectdropdown/setting.js') }}"></script>
+
+    <!-- masonry -->
+    <script src="{{ asset('js/masonry/masonry.min.js') }}"></script>
+    <script src="{{ asset('js/masonry/masonry.filter.js') }}"></script>
+    <script src="{{ asset('js/masonry/setting.js') }}"></script>
+
+    <!-- PrettyPhoto -->
+    <script src="{{ asset('js/prettyPhoto/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ asset('js/prettyPhoto/setting.js') }}"></script>
+
+    <!-- owl carousel -->
+    <script src="{{ asset('js/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/owlcarousel/setting.js') }}"></script>
+
+    <!-- Parallax -->
+    <script src="{{ asset('js/parallax/jquery.parallax-1.1.3.js') }}"></script>
+    <script src="{{ asset('js/parallax/setting.js') }}"></script>
+
+    <!-- Twitter -->
+    <script src="{{ asset('js/twitter/tweetie.min.js') }}"></script>
+    <script src="{{ asset('js/twitter/ticker.js') }}"></script>
+    <script src="{{ asset('js/twitter/setting.js') }}"></script>
+
+    <!-- Custom -->
+    <script src="{{ asset('js/custom.js') }}"></script>
+
+    <!-- Theme option-->
+    <script src="{{ asset('js/template-option/demosetting.js') }}"></script>
+
+{% endblock content %}

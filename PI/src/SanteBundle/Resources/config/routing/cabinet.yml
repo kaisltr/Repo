@@ -1,0 +1,24 @@
+cabinet_index:
+    path:     /
+    defaults: { _controller: "SanteBundle:Cabinet:index" }
+    methods:  GET
+
+cabinet_show:
+    path:     /{idCabinet}/show
+    defaults: { _controller: "SanteBundle:Cabinet:show" }
+    methods:  GET
+
+cabinet_new:
+    path:     /new
+    defaults: { _controller: "SanteBundle:Cabinet:new" }
+    methods:  [GET, POST]
+
+cabinet_edit:
+    path:     /{idCabinet}/edit
+    defaults: { _controller: "SanteBundle:Cabinet:edit" }
+    methods:  [GET, POST]
+
+cabinet_delete:
+    path:     /{idCabinet}/delete
+    defaults: { _controller: "SanteBundle:Cabinet:delete" }
+    methods:  DELETE
